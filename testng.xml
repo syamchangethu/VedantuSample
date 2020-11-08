@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="APITests" parallel="false">
+	<test name="APITests">
+		<classes>
+			<class name="com.qa.apitests.GetSinglePostTest" />
+			<class name="com.qa.apitests.GetInvalidPostTest" />
+			<class name="com.qa.apitests.PostTest" />
+			<class name="com.qa.apitests.UpdatePostTest" />
+			<class name="com.qa.apitests.DeletePostTest" />
+    	</classes>
+	</test>
+</suite>

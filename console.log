@@ -1,0 +1,157 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< qa:apiautomation >--------------------------
+[INFO] Building apiautomation 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ apiautomation ---
+[INFO] Deleting /Users/syamcs/eclipse-workspace/apiautomation/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ apiautomation ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ apiautomation ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/syamcs/eclipse-workspace/apiautomation/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ apiautomation ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/syamcs/eclipse-workspace/apiautomation/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ apiautomation ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to /Users/syamcs/eclipse-workspace/apiautomation/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M3:test (default-test) @ apiautomation ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+2019-07-12 08:08:17 INFO  TestConfigLoader:22 - Loading Global Configs
+2019-07-12 08:08:17 INFO  TestConfigLoader:24 - ---
+user_id: 1
+host: "https://jsonplaceholder.typicode.com"
+headers:
+  Content-Type: "application/json"
+
+2019-07-12 08:08:18 INFO  GetSinglePostTest:36 - 
+
+2019-07-12 08:08:18 INFO  GetSinglePostTest:37 - Starting the GetSinglePostTest
+2019-07-12 08:08:18 INFO  GetSinglePostTest:38 - 
+
+2019-07-12 08:08:18 INFO  HttpUtils:59 - ************************
+2019-07-12 08:08:18 INFO  HttpUtils:61 - Payload sent "null"
+2019-07-12 08:08:18 INFO  HttpUtils:67 - Headers passed {Content-Type=application/json}
+2019-07-12 08:08:18 INFO  HttpUtils:68 - URI Passed https://jsonplaceholder.typicode.com/posts/1
+2019-07-12 08:08:18 INFO  HttpUtils:69 - ************************
+2019-07-12 08:08:19 INFO  Assert:30 - Asserting Asserting the Status Code actual = 200, expected = 200 
+2019-07-12 08:08:19 INFO  HttpUtils:112 - Response obtained {
+  "userId" : 1,
+  "id" : 1,
+  "title" : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+  "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+}
+2019-07-12 08:08:19 INFO  SchemaValidationUtils:198 - Validating schema
+2019-07-12 08:08:19 INFO  SchemaValidationUtils:93 - com.github.fge.jsonschema.core.report.ListProcessingReport: success
+
+2019-07-12 08:08:19 INFO  SchemaValidationUtils:206 - Schema validation Passed
+2019-07-12 08:08:19 INFO  Assert:30 - Asserting Asserting Id actual = 1, expected = 1 
+2019-07-12 08:08:19 INFO  Assert:30 - Asserting Asserting UserId actual = 1, expected = 1 
+2019-07-12 08:08:19 INFO  Assert:10 - Asserting Asserting Title actual = sunt aut facere repellat provident occaecati excepturi optio reprehenderit, expected = sunt aut facere repellat provident occaecati excepturi optio reprehenderit 
+2019-07-12 08:08:19 INFO  Assert:10 - Asserting Asserting Body actual = quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto, expected = quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto 
+2019-07-12 08:08:19 INFO  GetInvalidPostTest:32 - 
+
+2019-07-12 08:08:19 INFO  GetInvalidPostTest:33 - Starting the GetInvalidPostTests
+2019-07-12 08:08:19 INFO  GetInvalidPostTest:34 - 
+
+2019-07-12 08:08:19 INFO  HttpUtils:59 - ************************
+2019-07-12 08:08:19 INFO  HttpUtils:61 - Payload sent "null"
+2019-07-12 08:08:19 INFO  HttpUtils:67 - Headers passed {Content-Type=application/json}
+2019-07-12 08:08:19 INFO  HttpUtils:68 - URI Passed https://jsonplaceholder.typicode.com/posts/invalidposts
+2019-07-12 08:08:19 INFO  HttpUtils:69 - ************************
+2019-07-12 08:08:20 INFO  Assert:30 - Asserting Asserting the Status Code actual = 404, expected = 404 
+2019-07-12 08:08:20 INFO  HttpUtils:112 - Response obtained {
+  "additionalProperties" : { }
+}
+2019-07-12 08:08:20 INFO  PostTest:38 - 
+
+2019-07-12 08:08:20 INFO  PostTest:39 - Starting the PostTest
+2019-07-12 08:08:20 INFO  PostTest:40 - 
+
+2019-07-12 08:08:20 INFO  HttpUtils:59 - ************************
+2019-07-12 08:08:20 INFO  HttpUtils:61 - Payload sent "{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1}"
+2019-07-12 08:08:20 INFO  HttpUtils:67 - Headers passed {Content-Type=application/json}
+2019-07-12 08:08:20 INFO  HttpUtils:68 - URI Passed https://jsonplaceholder.typicode.com/posts
+2019-07-12 08:08:20 INFO  HttpUtils:69 - ************************
+2019-07-12 08:08:21 INFO  Assert:30 - Asserting Asserting the Status Code actual = 201, expected = 201 
+2019-07-12 08:08:21 INFO  HttpUtils:112 - Response obtained {
+  "titleFooBodyBarUserId1" : null,
+  "id" : 101
+}
+2019-07-12 08:08:21 INFO  SchemaValidationUtils:198 - Validating schema
+2019-07-12 08:08:21 INFO  SchemaValidationUtils:93 - com.github.fge.jsonschema.core.report.ListProcessingReport: success
+
+2019-07-12 08:08:21 INFO  SchemaValidationUtils:206 - Schema validation Passed
+2019-07-12 08:08:21 INFO  Assert:30 - Asserting Asserting id actual = 101, expected = 101 
+2019-07-12 08:08:21 INFO  UpdatePostTest:38 - 
+
+2019-07-12 08:08:21 INFO  UpdatePostTest:39 - Starting the UpdatePostTest
+2019-07-12 08:08:21 INFO  UpdatePostTest:40 - 
+
+2019-07-12 08:08:21 INFO  HttpUtils:59 - ************************
+2019-07-12 08:08:21 INFO  HttpUtils:61 - Payload sent "{\"title\":\"foo\",\"body\":\"bar\",\"userId\":1,\"id\":1}"
+2019-07-12 08:08:21 INFO  HttpUtils:67 - Headers passed {Content-Type=application/json}
+2019-07-12 08:08:21 INFO  HttpUtils:68 - URI Passed https://jsonplaceholder.typicode.com/posts/1
+2019-07-12 08:08:21 INFO  HttpUtils:69 - ************************
+2019-07-12 08:08:22 INFO  Assert:30 - Asserting Asserting the Status Code actual = 200, expected = 200 
+2019-07-12 08:08:22 INFO  HttpUtils:112 - Response obtained {
+  "titleFooBodyBarUserId1" : null,
+  "id" : 1
+}
+2019-07-12 08:08:22 INFO  SchemaValidationUtils:198 - Validating schema
+2019-07-12 08:08:22 INFO  SchemaValidationUtils:93 - com.github.fge.jsonschema.core.report.ListProcessingReport: success
+
+2019-07-12 08:08:22 INFO  SchemaValidationUtils:206 - Schema validation Passed
+2019-07-12 08:08:22 INFO  Assert:30 - Asserting Asserting id actual = 1, expected = 1 
+2019-07-12 08:08:22 INFO  DeletePostTest:31 - 
+
+2019-07-12 08:08:22 INFO  DeletePostTest:32 - Starting the PostTest
+2019-07-12 08:08:22 INFO  DeletePostTest:33 - 
+
+2019-07-12 08:08:22 INFO  HttpUtils:59 - ************************
+2019-07-12 08:08:22 INFO  HttpUtils:61 - Payload sent "{\"Content-Type\":\"application/json\"}"
+2019-07-12 08:08:22 INFO  HttpUtils:67 - Headers passed {Content-Type=application/json}
+2019-07-12 08:08:22 INFO  HttpUtils:68 - URI Passed https://jsonplaceholder.typicode.com/posts/1
+2019-07-12 08:08:22 INFO  HttpUtils:69 - ************************
+2019-07-12 08:08:22 INFO  Assert:30 - Asserting Asserting the Status Code actual = 200, expected = 200 
+2019-07-12 08:08:22 INFO  HttpUtils:112 - Response obtained {
+  "titleFooBodyBarUserId1" : null,
+  "id" : null
+}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.175 s - in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ apiautomation ---
+[INFO] Building jar: /Users/syamcs/eclipse-workspace/apiautomation/target/apiautomation-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ apiautomation ---
+[INFO] Installing /Users/syamcs/eclipse-workspace/apiautomation/target/apiautomation-0.0.1-SNAPSHOT.jar to /Users/syamcs/.m2/repository/qa/apiautomation/0.0.1-SNAPSHOT/apiautomation-0.0.1-SNAPSHOT.jar
+[INFO] Installing /Users/syamcs/eclipse-workspace/apiautomation/pom.xml to /Users/syamcs/.m2/repository/qa/apiautomation/0.0.1-SNAPSHOT/apiautomation-0.0.1-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.612 s
+[INFO] Finished at: 2019-07-12T08:08:23+05:30
+[INFO] ------------------------------------------------------------------------
